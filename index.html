@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Hex Code Generator</title>
+</head>
+<body>
+<p id="out">&nbsp;</p>
+<button id="btn">Generate</button>
+<script>
+var first="123456789";
+var rest="0123456789abcdef";
+function generate(){
+var code=first[Math.floor(Math.random()*first.length)];
+for(var i=1;i<6;i++){
+code+=rest[Math.floor(Math.random()*rest.length)];
+}
+document.getElementById("out").textContent=code;
+}
+document.getElementById("btn").addEventListener("click",generate);
+generate();
+</script>
+</body>
+</html>
